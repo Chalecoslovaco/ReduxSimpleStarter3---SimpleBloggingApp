@@ -8,7 +8,7 @@ export default function(state = {}, action) {
             const newState = { ...state };
             newState[post.id] = post;
             return newState;*/ //ES5
-            return { ...state, [action.payload.data.id]: action.payload.data}
+            return { ...state, [action.payload.data.id]: action.payload.data} //ES6
         case FETCH_POSTS:
             return _.mapKeys(action.payload.data, 'id');
         default:

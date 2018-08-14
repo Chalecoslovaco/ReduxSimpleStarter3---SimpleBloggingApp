@@ -21,7 +21,7 @@ export function createPost(values, callback) {
         .then(() => {callback()});
 
     return {
-        type: FETCH_POSTS,
+        type: CREATE_POST,
         payload: request
     };
 }
